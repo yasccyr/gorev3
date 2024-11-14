@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Oluştur / Düzenleme";
+}
+
+@model SpendSmart.Models.Expense
+
+
+<div class="text-center">
+    <h1 class="display-4">Gider Oluşturun veya Düzenleyin</h1>
+</div>
+
+<form asp-action="CreateEditExpenseForm" asp-controller="home">
+    <label></label>
+    <input hidden class="form-control" type="number" placeholder="0" asp-for="ID" />
+
+    <label class="mt-4">Fiyat</label>
+    <input class="form-control" type="number" placeholder="0" asp-for="Value" step="0.01" />
+
+    <label class="mt-4">Açıklama</label>
+    <input class="form-control" type="text" placeholder="Açıklama Yazın" asp-for="Despriction" />
+
+    <button class="btn btn-primary mt-4" type="submit">Ekle</button>
+</form>
